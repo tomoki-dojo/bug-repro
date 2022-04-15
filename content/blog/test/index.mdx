@@ -1,0 +1,46 @@
+---
+title: test
+date: "2022-04-02T22:00:00.121Z"
+pagetype: blog
+hero: "./eyecatch.jpg"
+category1: "category1"
+category2: "category2"
+tags: ["tag1"]
+description: description
+embeddedImagesLocalL:
+    - './limg.jpg'
+
+embeddedImagesLocalP:
+    - './pimg.jpg'
+---
+
+import {getImage, GatsbyImage} from 'gatsby-plugin-image';
+import EmbedMap from '../../../src/components/blogparts/embedmap';
+import ExternalLink from '../../../src/components/blogparts/externallink';
+import * as styles from '../../../src/styles/basemdx.module.scss';
+
+
+## Test
+
+imgtest
+
+<GatsbyImage
+    alt='img' 
+    image={getImage(props.localImagesL[0])}
+/>
+
+<GatsbyImage
+    alt='img' 
+    image={getImage(props.localImagesP[0])}
+/>
+
+external link test
+
+<ExternalLink href = "https://www.gatsbyjs.com/">external link test</ExternalLink>。
+
+embed map test
+
+<EmbedMap>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51857.08259663448!2d139.72650868116187!3d35.6753359117892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1649984365165!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</EmbedMap>
+
